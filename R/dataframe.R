@@ -33,6 +33,8 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       'character'
     } else if (is.factor(f)) {
       'factor'
+    } else if (is.logical(f)) {
+      'logical'
     } else if (inherits(f, 'Date') || inherits(f, 'POSIXt')) {
       'date_time'
     } else {
